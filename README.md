@@ -24,7 +24,8 @@
 
 ## 일정
 
-[문제 리스트](J-algorithm%204e8a9a6a0503489d8c76d1c02e74ed4b/%E1%84%86%E1%85%AE%E1%86%AB%E1%84%8C%E1%85%A6%20%E1%84%85%E1%85%B5%E1%84%89%E1%85%B3%E1%84%90%E1%85%B3%20afef589b2b524f7b87b50bb5ce977684.csv)
+[문제 리스트](https://github.com/J-algorithm/J-algorithm/blob/main/J-algorithm%204e8a9a6a0503489d8c76d1c02e74ed4b/%EB%AC%B8%EC%A0%9C%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%20afef589b2b524f7b87b50bb5ce977684.csv)
+https://github.com/J-algorithm/J-algorithm/blob/main/J-algorithm%204e8a9a6a0503489d8c76d1c02e74ed4b/%EB%AC%B8%EC%A0%9C%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%20afef589b2b524f7b87b50bb5ce977684.csv
 [문제 리스트](J-algorithm 4e8a9a6a0503489d8c76d1c02e74ed4b/문제 리스트 afef589b2b524f7b87b50bb5ce977684.csv)
 [문제 리스트](J-algorithm 4e8a9a6a0503489d8c76d1c02e74ed4b/문제 리스트 afef589b2b524f7b87b50bb5ce977684.csv)
 
