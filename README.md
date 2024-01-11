@@ -14,7 +14,7 @@
 | 공진호 |  |  |
 | 김주한 | hanykim1210@gmail.com | https://github.com/Hany-Kim |
 | 송진주 |  |  |
-| 이지영 |  |  |
+| 이지영 | jioung93@naver.com | https://github.com/gorapaduckoo |
 | 홍예진 |  |  |
 
 ## 스터디 진행
