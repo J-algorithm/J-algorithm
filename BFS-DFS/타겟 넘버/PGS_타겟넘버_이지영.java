@@ -1,4 +1,4 @@
-class Programmers_타겟넘버_이지영{
+class PGS_타겟넘버_이지영 {
     int N, TARGET, answer = 0;
     public int solution(int[] numbers, int target) {
         N = numbers.length;
