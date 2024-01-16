@@ -9,7 +9,7 @@
 
 | 이름   | 이메일                | Git                             |
 | ------ | --------------------- | ------------------------------- |
-| 공진호 |                       |                                 |
+| 공진호 | wlsgh7608@naver.com   | https://github.com/wlsgh7608    |
 | 김주한 | hanykim1210@gmail.com | https://github.com/Hany-Kim     |
 | 송진주 | ddelsen3130@gmail.com | https://github.com/pearl313     |
 | 이지영 | jioung93@naver.com    | https://github.com/gorapaduckoo |
