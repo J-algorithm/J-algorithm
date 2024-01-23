@@ -1,12 +1,17 @@
 import java.util.*;
 
-class Airplane {
+class Airplane implements Comparable<Airplane> {
     String name;
-    List<Airplane> list;
+    LinkedList<Airplane> list;
     public Airplane(String name){
         this.name = name;
         list = new LinkedList<Airplane>();
     }
+    @Override
+    public int compareTo(Airplane a){
+        return this.name.compareTo(a.name);
+    }
+    
 }
 
 class Solution {
@@ -48,7 +53,7 @@ class Solution {
         Airplane ap = map.get(start);
         String[] result = new  String[n];
         result[0] = start;
-        dfs(0, start, map, result);
+        dfs(0, ap, map, result);
         
         return result;
     }
