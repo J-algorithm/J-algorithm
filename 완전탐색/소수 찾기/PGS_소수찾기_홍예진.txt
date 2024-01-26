@@ -1,21 +1,14 @@
 import java.util.*;
 
-public class Main {
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        s.solution("011");
-    }
-}
-
 class Solution {
-    int answer;
-    public boolean isPrime(String num){
-        System.out.println(num);
-        int value = Integer.parseInt(num);
-        if(value == 1 || value%2 == 0) return false;
+    Set<Integer> set;
+    public boolean isPrime(int value){
         if(value == 2) return true;
+        if(value == 1 || value%2 == 0) return false;
         for(int i = 3; i <= Math.sqrt(value); i+=2){
-            if(value%i == 0) return false;
+            if(value%i == 0) {
+                return false;
+            }
         }
         return true;
     }
@@ -23,7 +16,7 @@ class Solution {
         String temp = number[idx];
         num += number[idx];
         number[idx] = "";
-        if(isPrime(num)) answer++;
+        if(isPrime(Integer.parseInt(num))) set.add(Integer.parseInt(num));
 
         for(int i = 0; i < number.length; i++){
             if(number[i] == "") continue;
@@ -34,11 +27,10 @@ class Solution {
     }
     public int solution(String numbers) {
         String[] number = numbers.split("");
-        answer = 0;
+        set = new HashSet<>();
         for(int i = 0; i < number.length; i++)
             solve(i, "", number);
 
-        System.out.println("answer : "+answer);
-        return answer;
+        return set.size();
     }
 }
