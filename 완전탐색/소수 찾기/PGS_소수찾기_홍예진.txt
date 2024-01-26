@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        s.solution("011");
+    }
+}
+
+class Solution {
+    int answer;
+    public boolean isPrime(String num){
+        System.out.println(num);
+        int value = Integer.parseInt(num);
+        if(value == 1 || value%2 == 0) return false;
+        if(value == 2) return true;
+        for(int i = 3; i <= Math.sqrt(value); i+=2){
+            if(value%i == 0) return false;
+        }
+        return true;
+    }
+    public void solve(int idx, String num, String[] number){
+        String temp = number[idx];
+        num += number[idx];
+        number[idx] = "";
+        if(isPrime(num)) answer++;
+
+        for(int i = 0; i < number.length; i++){
+            if(number[i] == "") continue;
+            solve(i, num, number);
+        }
+
+        number[idx] = temp;
+    }
+    public int solution(String numbers) {
+        String[] number = numbers.split("");
+        answer = 0;
+        for(int i = 0; i < number.length; i++)
+            solve(i, "", number);
+
+        System.out.println("answer : "+answer);
+        return answer;
+    }
+}
