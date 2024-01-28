@@ -12,25 +12,29 @@ class Solution {
         }
         return true;
     }
-    public void solve(int idx, String num, String[] number){
+    public void solve(int idx, StringBuilder sb, String[] number){
         String temp = number[idx];
-        num += number[idx];
+        sb.append(number[idx]);
         number[idx] = "";
-        if(isPrime(Integer.parseInt(num))) set.add(Integer.parseInt(num));
+        int value = Integer.parseInt(sb.toString());
+        if(isPrime(value)) set.add(value);
 
         for(int i = 0; i < number.length; i++){
-            if(number[i] == "") continue;
-            solve(i, num, number);
+            if(Objects.equals(number[i], "")) continue;
+            solve(i, sb, number);
         }
 
+        sb.setLength(sb.length() - 1);
         number[idx] = temp;
     }
     public int solution(String numbers) {
         String[] number = numbers.split("");
         set = new HashSet<>();
-        for(int i = 0; i < number.length; i++)
-            solve(i, "", number);
-
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < number.length; i++) {
+            sb.setLength(0);
+            solve(i, sb, number);
+        }
         return set.size();
     }
 }
