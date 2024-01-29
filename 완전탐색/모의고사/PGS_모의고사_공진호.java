@@ -1,5 +1,3 @@
-package 완전탐색.모의고사;
-
 import java.util.*;
 
 class PGS_모의고사_공진호 {
