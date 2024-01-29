@@ -1,5 +1,3 @@
-package 완전탐색.최소직사각형;
-
 public class PGS_최소직사각형_공진호 {
     public int solution(int[][] sizes) {
         int longLen = 0;
