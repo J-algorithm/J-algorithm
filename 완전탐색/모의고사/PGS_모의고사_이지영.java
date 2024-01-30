@@ -46,8 +46,7 @@ public class PGS_모의고사_이지영 {
         void init() {
             q = new Queue[N];
             for(int i=0; i<N; i++) {
-                q[i] = new ArrayDeque<>();
-                q[i].addAll(Arrays.asList(guessAnswer[i]));
+                q[i] = new ArrayDeque<>(Arrays.asList(guessAnswer[i]));
             }
         }
     }
