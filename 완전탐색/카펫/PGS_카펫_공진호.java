@@ -12,7 +12,7 @@ class PGS_카펫_공진호 {
                 }
             }
         }
-
-        return null;
+        // default value
+        return new int[]{-1, -1};
     }
 }
