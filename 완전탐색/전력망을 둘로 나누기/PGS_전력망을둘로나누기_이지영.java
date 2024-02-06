@@ -4,41 +4,38 @@ public class PGS_전력망을둘로나누기_이지영 {
 
     class Solution {
         int N, START = 1;
-        boolean[][] graph;
+        int[] cutWire;
+        List<Integer>[] graph;
         public int solution(int n, int[][] wires) {
 
             int answer = n;
 
             init(n, wires);
 
-            for (int[] wire : wires) {
-                int a = wire[0];
-                int b = wire[1];
-
-                graph[a][b] = false;
-                graph[b][a] = false;
+            for (int i=0; i<wires.length; i++) {
+                cutWire = wires[i];
 
                 int visitedCnt = bfs();
                 int unvisitedCnt = n - visitedCnt;
 
                 answer = Math.min(answer, Math.abs(visitedCnt - unvisitedCnt));
-
-                graph[a][b] = true;
-                graph[b][a] = true;
             }
             return answer;
         }
 
         void init(int n, int[][] wires) {
             N = n;
-            graph = new boolean[N+1][N+1];
+            graph = new ArrayList[N+1];
+            for (int i=1; i<=N; i++) {
+                graph[i] = new ArrayList<>();
+            }
 
-            for (int[] wire : wires) {
-                int a = wire[0];
-                int b = wire[1];
+            for (int i=0; i<wires.length; i++) {
+                int a = wires[i][0];
+                int b = wires[i][1];
 
-                graph[a][b] = true;
-                graph[b][a] = true;
+                graph[a].add(b);
+                graph[b].add(a);
             }
         }
 
@@ -54,8 +51,9 @@ public class PGS_전력망을둘로나누기_이지영 {
                 int now = q.poll();
                 visitedCnt++;
 
-                for (int next=1; next<=N; next++) {
-                    if(visited[next] || !graph[now][next]) continue;
+                for (int next : graph[now]) {
+                    if(visited[next]) continue;
+                    if(cutWire[0]==Math.min(now, next) && cutWire[1]==Math.max(now, next)) continue;
 
                     q.add(next);
                     visited[next] = true;
