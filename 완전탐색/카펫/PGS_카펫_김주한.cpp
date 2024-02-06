@@ -5,16 +5,16 @@ using namespace std;
 
 #define FOR(i,s,e) for(int i=s; i<e; ++i)
 
-vector<int> length_v; // ¾à¼ö ÀúÀå
-vector<int> width_v; // ¾à¼ö ÀúÀå
+vector<int> length_v; // ì•½ìˆ˜ ì €ì¥
+vector<int> width_v; // ì•½ìˆ˜ ì €ì¥
 
 void get_divisor(int num) {
     /*
-    num¿¡ ´ëÇÑ ¾à¼ö¸¦ Ã£´Â ÇÔ¼ö
+    numì— ëŒ€í•œ ì•½ìˆ˜ë¥¼ ì°¾ëŠ” í•¨ìˆ˜
     */
     FOR(i, 1, num + 1) {
-        if ((num % i) != 0) continue; // ³ª´©¾î ¶³¾îÁöÁö ¾ÊÀ¸¸é ¾à¼ö°¡ ¾Æ´Ô
-        if (i > (num / i)) break; // ¼¼·Î ±æÀÌ°¡ °¡·Î ±æÀÌº¸´Ù ±æ¸é ¾ÈµÊ
+        if ((num % i) != 0) continue; // ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ì§€ ì•Šìœ¼ë©´ ì•½ìˆ˜ê°€ ì•„ë‹˜
+        if (i > (num / i)) break; // ì„¸ë¡œ ê¸¸ì´ê°€ ê°€ë¡œ ê¸¸ì´ë³´ë‹¤ ê¸¸ë©´ ì•ˆë¨
         length_v.push_back(i);
         width_v.push_back(num / i);
     }
@@ -22,19 +22,19 @@ void get_divisor(int num) {
 
 bool isSame(int n1, int n2, int brown) {
     /*
-    yellow¸¦ °¨½Î°í ÀÖ´Â brownÀÇ Å©±â´Â Ç×»ó
-    yellowÀÇ °¡·Î±æÀÌÀÇ 2¹è, ¼¼·Î±æÀÌÀÇ 2¹è¿¡ ¸ğÅüÀÌ 4°³¸¦ ´õÇÑ °ªÀÌ´Ù.
+    yellowë¥¼ ê°ì‹¸ê³  ìˆëŠ” brownì˜ í¬ê¸°ëŠ” í•­ìƒ
+    yellowì˜ ê°€ë¡œê¸¸ì´ì˜ 2ë°°, ì„¸ë¡œê¸¸ì´ì˜ 2ë°°ì— ëª¨í‰ì´ 4ê°œë¥¼ ë”í•œ ê°’ì´ë‹¤.
     */
     int width = n2 * 2;
     int length = n1 * 2;
     int corner = 4;
 
     /*
-    numÀº yellowÀÇ Å©±â¿¡ ´ëÇØ Å×µÎ¸®¸¦ °¨½Ñ Å©±â
+    numì€ yellowì˜ í¬ê¸°ì— ëŒ€í•´ í…Œë‘ë¦¬ë¥¼ ê°ì‹¼ í¬ê¸°
     */
     int num = width + length + corner;
 
-    if (num == brown) return true; // brown°ú °°´Ù¸é Ã£°íÀÚ ÇÏ´Â °¡·Î ¼¼·Î ±æÀÌÀÓ
+    if (num == brown) return true; // brownê³¼ ê°™ë‹¤ë©´ ì°¾ê³ ì í•˜ëŠ” ê°€ë¡œ ì„¸ë¡œ ê¸¸ì´ì„
     else return false;
 }
 

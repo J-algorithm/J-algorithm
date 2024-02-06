@@ -6,21 +6,21 @@ using namespace std;
 
 #define FOR(i,s,e) for(int i=s; i<e; ++i)
 
-vector<int> path; // Á¶ÇÕ ±â·Ï
-vector<int> used; // ÀÌ¹Ì »ç¿ëÇÑ ´øÀü Ã¼Å©
-int cnt; // ÃÖ´ë ´øÀü È½¼ö ÀúÀå
+vector<int> path; // ì¡°í•© ê¸°ë¡
+vector<int> used; // ì´ë¯¸ ì‚¬ìš©í•œ ë˜ì „ ì²´í¬
+int cnt; // ìµœëŒ€ ë˜ì „ íšŸìˆ˜ ì €ì¥
 
 void backTracking(int k, vector<vector<int>> dg, int lv) {
     if (lv == dg.size()) {
-        int cur_k = k; // ÇöÀç Á¶ÇÕÀ¸·Î ³²Àº ÇÇ·Îµµ ±â·Ï
+        int cur_k = k; // í˜„ì¬ ì¡°í•©ìœ¼ë¡œ ë‚¨ì€ í”¼ë¡œë„ ê¸°ë¡
         int cur_size = path.size();
-        int cur_cnt = 0; // ÇöÀç Á¶ÇÕÀ¸·Î ÁøÇàÇÒ ¼ö ÀÖ´Â ÃÖ´ë ´øÀü ¼ö
+        int cur_cnt = 0; // í˜„ì¬ ì¡°í•©ìœ¼ë¡œ ì§„í–‰í•  ìˆ˜ ìˆëŠ” ìµœëŒ€ ë˜ì „ ìˆ˜
         FOR(i, 0, cur_size) {
-            if (cur_k < dg[path[i]][0]) { // ÃÖ¼Ò ÇÊ¿ä ÇÇ·Îµµº¸´Ù ÀÛÀ¸¸é ³¡
+            if (cur_k < dg[path[i]][0]) { // ìµœì†Œ í•„ìš” í”¼ë¡œë„ë³´ë‹¤ ì‘ìœ¼ë©´ ë
                 break;
             }
-            cur_k -= dg[path[i]][1]; // ¼Ò¸ğ ÇÇ·Îµµ »©ÁÜ
-            cur_cnt += 1; // ´øÀü ¼ö Áõ°¡
+            cur_k -= dg[path[i]][1]; // ì†Œëª¨ í”¼ë¡œë„ ë¹¼ì¤Œ
+            cur_cnt += 1; // ë˜ì „ ìˆ˜ ì¦ê°€
         }
 
         cnt = max(cnt, cur_cnt);

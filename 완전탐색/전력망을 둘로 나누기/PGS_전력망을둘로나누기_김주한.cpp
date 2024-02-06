@@ -40,11 +40,11 @@ int divide_net() {
         FOR(x, 0, map[y].size()) {
             if (map[y][x] == 0) continue;
             if (used[x] != 0) continue;
-            bfs(x, num++); // Æ®¸®·Î ¿¬°áµÈ ³ëµåµé Ã£±â
+            bfs(x, num++); // íŠ¸ë¦¬ë¡œ ì—°ê²°ëœ ë…¸ë“œë“¤ ì°¾ê¸°
         }
     }
     
-    if (num == 2) { // Æ®¸®¿Í ³ëµå1°³·Î ÀÌ·ç¾îÁø ºĞ¸®, (numÀÌ 1ÀÎ Æ®¸® ¿Í num¹øÈ£°¡ ¾ø´Â ´ÜÀÏ ³ëµå)
+    if (num == 2) { // íŠ¸ë¦¬ì™€ ë…¸ë“œ1ê°œë¡œ ì´ë£¨ì–´ì§„ ë¶„ë¦¬, (numì´ 1ì¸ íŠ¸ë¦¬ ì™€ numë²ˆí˜¸ê°€ ì—†ëŠ” ë‹¨ì¼ ë…¸ë“œ)
         int fir = 0, sec = 0;
         FOR(i, 1, N_MAX) {
             if (used[i] == 1) fir += 1;
@@ -52,7 +52,7 @@ int divide_net() {
         }
         my_abs = abs(fir - sec);
     }
-    else if (num == 3) { // µÎ°³ÀÇ Æ®¸®·Î ÀÌ·ç¾îÁø ºĞ¸®, (numÀÌ 1ÀÎ Æ®¸® ¿Í numÀÌ 2ÀÎ Æ®¸®)
+    else if (num == 3) { // ë‘ê°œì˜ íŠ¸ë¦¬ë¡œ ì´ë£¨ì–´ì§„ ë¶„ë¦¬, (numì´ 1ì¸ íŠ¸ë¦¬ ì™€ numì´ 2ì¸ íŠ¸ë¦¬)
         int fir = 0, sec = 0;
         FOR(i, 1, N_MAX) {
             if (used[i] == 1) fir += 1;
@@ -60,24 +60,24 @@ int divide_net() {
         }
         my_abs = abs(fir - sec);
     }
-    // ³ª¸ÓÁöÀÇ °æ¿ì´Â ¿©·¯°³ÀÇ Æ®¸®°¡ ³ª¿À±â¶§¹®¿¡ Ã³¸® ÇÊ¿ä¾ø´Ù.
+    // ë‚˜ë¨¸ì§€ì˜ ê²½ìš°ëŠ” ì—¬ëŸ¬ê°œì˜ íŠ¸ë¦¬ê°€ ë‚˜ì˜¤ê¸°ë•Œë¬¸ì— ì²˜ë¦¬ í•„ìš”ì—†ë‹¤.
 
     return my_abs;
 }
 
 int solution(int n, vector<vector<int>> wires) {
     int answer = -1;
-    int min_abs = 2134567890; // Àı´ñ°ª Â÷ÀÌÀÇ ÃÖ¼Ú°ª ÀúÀå
+    int min_abs = 2134567890; // ì ˆëŒ“ê°’ ì°¨ì´ì˜ ìµœì†Ÿê°’ ì €ì¥
 
-    // wires¿¡ ´ëÇÑ Á¤º¸·Î graphÇà·Ä ÇüÅÂ¸¦ ±×¸²
+    // wiresì— ëŒ€í•œ ì •ë³´ë¡œ graphí–‰ë ¬ í˜•íƒœë¥¼ ê·¸ë¦¼
     graph = vector<vector<int>>(N_MAX, vector<int>(N_MAX, 0));
     FOR(i, 0, wires.size()) {
         graph[wires[i][0]][wires[i][1]] = 1;
         graph[wires[i][1]][wires[i][0]] = 1;
     }
 
-    // graph Çà·ÄÀ» map¿¡ º¹»çÇÏ°í
-    // ¿¬°áµÈ ¼±À» ÇÏ³ª¾¿ ²÷¾î°¡¸ç ºĞ¸®
+    // graph í–‰ë ¬ì„ mapì— ë³µì‚¬í•˜ê³ 
+    // ì—°ê²°ëœ ì„ ì„ í•˜ë‚˜ì”© ëŠì–´ê°€ë©° ë¶„ë¦¬
     FOR(y, 0, graph.size()) {
         FOR(x, 0, graph[y].size()) {
             if (graph[y][x] == 0) continue;

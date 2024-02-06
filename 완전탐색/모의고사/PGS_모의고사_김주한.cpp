@@ -5,27 +5,27 @@ using namespace std;
 
 #define FOR(i,s,e) for(int i=s; i<e; ++i)
 
-vector<int> p1 = { 1,2,3,4,5 }; // 1¹ø ¼öÆ÷ÀÚ
-vector<int> p2 = { 2,1,2,3,2,4,2,5 }; // 2¹ø ¼öÆ÷ÀÚ
-vector<int> p3 = { 3,3,1,1,2,2,4,4,5,5 }; // 3¹ø ¼öÆ÷ÀÚ
-int p1_cnt; // 1¹ø ¼öÆ÷ÀÚ°¡ ¸ÂÈù ¹®Á¦ °¹¼ö
-int p2_cnt; // 2¹ø ¼öÆ÷ÀÚ°¡ ¸ÂÈù ¹®Á¦ °¹¼ö
-int p3_cnt; // 3¹ø ¼öÆ÷ÀÚ°¡ ¸ÂÈù ¹®Á¦ °¹¼ö
-int max_num; // ÃÖ´ë·Î ¸¹ÀÌ ¸ÂÈù ¹®Á¦ °¹¼ö ÀúÀå
+vector<int> p1 = { 1,2,3,4,5 }; // 1ë²ˆ ìˆ˜í¬ìž
+vector<int> p2 = { 2,1,2,3,2,4,2,5 }; // 2ë²ˆ ìˆ˜í¬ìž
+vector<int> p3 = { 3,3,1,1,2,2,4,4,5,5 }; // 3ë²ˆ ìˆ˜í¬ìž
+int p1_cnt; // 1ë²ˆ ìˆ˜í¬ìžê°€ ë§žížŒ ë¬¸ì œ ê°¯ìˆ˜
+int p2_cnt; // 2ë²ˆ ìˆ˜í¬ìžê°€ ë§žížŒ ë¬¸ì œ ê°¯ìˆ˜
+int p3_cnt; // 3ë²ˆ ìˆ˜í¬ìžê°€ ë§žížŒ ë¬¸ì œ ê°¯ìˆ˜
+int max_num; // ìµœëŒ€ë¡œ ë§Žì´ ë§žížŒ ë¬¸ì œ ê°¯ìˆ˜ ì €ìž¥
 
 vector<int> solution(vector<int> answers) {
     vector<int> answer;
 
     FOR(i, 0, answers.size()) {
         /*
-        °°Àº ¹øÈ£·Î ¹«ÇÑ ¹Ýº¹ÇÏ¸ç Âï´Â´Ù°í °¡Á¤
-        p1Àº 5¹ø¿¡ 1¼øÈ¯ == p1.size()
-        p2´Â 8¹ø¿¡ 1¼øÈ¯ == p2.size()
-        p3´Â 10¹ø¿¡ 1¼øÈ¯ == p3.size()
+        ê°™ì€ ë²ˆí˜¸ë¡œ ë¬´í•œ ë°˜ë³µí•˜ë©° ì°ëŠ”ë‹¤ê³  ê°€ì •
+        p1ì€ 5ë²ˆì— 1ìˆœí™˜ == p1.size()
+        p2ëŠ” 8ë²ˆì— 1ìˆœí™˜ == p2.size()
+        p3ëŠ” 10ë²ˆì— 1ìˆœí™˜ == p3.size()
 
-        answers¹è¿­À» ¼øÈ¸ÇÏ¸ç ¹®Á¦¸¦ ¸ÂÈ÷¸é ¼öÆ÷ÀÚ °¢°¢ÀÇ cnt¸¦ °»½ÅÇØÁØ´Ù.
+        answersë°°ì—´ì„ ìˆœíšŒí•˜ë©° ë¬¸ì œë¥¼ ë§žížˆë©´ ìˆ˜í¬ìž ê°ê°ì˜ cntë¥¼ ê°±ì‹ í•´ì¤€ë‹¤.
 
-        ¶ÇÇÑ ÇöÀç±îÁö °¡Àå ¸¹ÀÌ ¸ÂÈù °¹¼ö¸¦ max_num¿¡ ¾÷µ¥ÀÌÆ®ÇÏ¸é¼­ Áö³ª°¨.
+        ë˜í•œ í˜„ìž¬ê¹Œì§€ ê°€ìž¥ ë§Žì´ ë§žížŒ ê°¯ìˆ˜ë¥¼ max_numì— ì—…ë°ì´íŠ¸í•˜ë©´ì„œ ì§€ë‚˜ê°.
         */
         if (answers[i] == p1[i % (p1.size())]) {
             ++p1_cnt;
@@ -40,8 +40,8 @@ vector<int> solution(vector<int> answers) {
     }
 
     /*
-    °¡Àå ¸¹ÀÌ ¸ÂÈù °¹¼ö¿Í ¼öÆ÷ÀÚ °¢°¢ÀÇ ¸ÂÈù °¹¼ö°¡ °°´Ù¸é,
-    ÇØ´ç ¼öÆ÷ÀÚ´Â °¡Àå ¸¹Àº Á¤´äÀ» ¸ÂÈù ¼öÆ÷ÀÚÀÓ
+    ê°€ìž¥ ë§Žì´ ë§žížŒ ê°¯ìˆ˜ì™€ ìˆ˜í¬ìž ê°ê°ì˜ ë§žížŒ ê°¯ìˆ˜ê°€ ê°™ë‹¤ë©´,
+    í•´ë‹¹ ìˆ˜í¬ìžëŠ” ê°€ìž¥ ë§Žì€ ì •ë‹µì„ ë§žížŒ ìˆ˜í¬ìžìž„
     */
     if (p1_cnt == max_num) answer.push_back(1);
     if (p2_cnt == max_num) answer.push_back(2);
