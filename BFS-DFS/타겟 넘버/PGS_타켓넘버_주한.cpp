@@ -28,7 +28,7 @@ void backtracking(int lv, vector<int> numbers, int target) {
 int solution(vector<int> numbers, int target) {
     int answer = 0;
 
-    backtracking(0, numbers, target); // ºÎÈ£ Á¶ÇÕ
+    backtracking(0, numbers, target); // ë¶€í˜¸ ì¡°í•©
 
     answer = cnt;
 

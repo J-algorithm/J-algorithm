@@ -11,9 +11,9 @@ vector<string> tmp;
 
 bool isAllVisit() {
     /*
-    ¸ğµç Æ¼ÄÏÀ» »ç¿ëÇß´ÂÁö °ËÁõÇÏ´Â ÇÔ¼ö
-    ¸ğµÎ »ç¿ëÇß´Ù¸é true
-    ¾Æ´Ï¶ó¸é false
+    ëª¨ë“  í‹°ì¼“ì„ ì‚¬ìš©í–ˆëŠ”ì§€ ê²€ì¦í•˜ëŠ” í•¨ìˆ˜
+    ëª¨ë‘ ì‚¬ìš©í–ˆë‹¤ë©´ true
+    ì•„ë‹ˆë¼ë©´ false
     */
     FOR(i, 0, used.size()) {
         if (used[i] != 1) return false;
@@ -23,9 +23,9 @@ bool isAllVisit() {
 
 void dic_sort() {
     /* 
-    »çÀü ¼øÀ¸·Î ¾Õ¼± Æ¼ÄÏ Á¶ÇÕÀ¸·Î °»½ÅÇÏ´Â ÇÔ¼ö
-    ¸ğµç Æ¼ÄÏ Á¶ÇÕÀ» path¿¡ ÀúÀåÇÑ ÈÄ tmp¿¡ ÀúÀåµÈ Æ¼ÄÏÁ¶ÇÕÀ» ºñ±³ ÈÄ
-    »çÀü ¼øÀ¸·Î ¾Õ¼± Á¶ÇÕÀ» tmp¹è¿­¿¡ °»½Å
+    ì‚¬ì „ ìˆœìœ¼ë¡œ ì•ì„  í‹°ì¼“ ì¡°í•©ìœ¼ë¡œ ê°±ì‹ í•˜ëŠ” í•¨ìˆ˜
+    ëª¨ë“  í‹°ì¼“ ì¡°í•©ì„ pathì— ì €ì¥í•œ í›„ tmpì— ì €ì¥ëœ í‹°ì¼“ì¡°í•©ì„ ë¹„êµ í›„
+    ì‚¬ì „ ìˆœìœ¼ë¡œ ì•ì„  ì¡°í•©ì„ tmpë°°ì—´ì— ê°±ì‹ 
     */
     if (tmp.empty() == true) {
         tmp = path;
@@ -47,7 +47,7 @@ void dic_sort() {
 void find_path(string start, vector<vector<string>> tickets, int lv) {
     //--------------------------------------
     /*
-    Æ¼ÄÏÀ» ¸ğµÎ »ç¿ëÇÑ Á¶ÇÕÀÌ¶ó¸é »çÀü ¼øÀ¸·Î ¾Õ¼± Á¶ÇÕ È®ÀÎ
+    í‹°ì¼“ì„ ëª¨ë‘ ì‚¬ìš©í•œ ì¡°í•©ì´ë¼ë©´ ì‚¬ì „ ìˆœìœ¼ë¡œ ì•ì„  ì¡°í•© í™•ì¸
     */
     if (isAllVisit() == true) {
         dic_sort();
@@ -70,10 +70,10 @@ void find_path(string start, vector<vector<string>> tickets, int lv) {
 vector<string> solution(vector<vector<string>> tickets) {
     vector<string> answer;
 
-    used = vector<int>(tickets.size(), 0); // Æ¼ÄÏ »ç¿ë¿©ºÎ È®ÀÎ
+    used = vector<int>(tickets.size(), 0); // í‹°ì¼“ ì‚¬ìš©ì—¬ë¶€ í™•ì¸
 
     path.push_back("ICN");
-    find_path("ICN", tickets, 1); // DFS·Î ¸ğµç Æ¼ÄÏ Á¶ÇÕÈ®ÀÎ
+    find_path("ICN", tickets, 1); // DFSë¡œ ëª¨ë“  í‹°ì¼“ ì¡°í•©í™•ì¸
 
     answer = tmp;
 
