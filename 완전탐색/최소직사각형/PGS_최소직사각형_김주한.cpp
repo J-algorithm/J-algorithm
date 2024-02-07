@@ -30,7 +30,7 @@ int solution(vector<vector<int>> sizes) {
     int answer = 0;
 
     /*
-    dfs¸¦ È°¿ëÇØ ¹®Á¦¸¦ ÇØ°á ÇÏ·Á ÇßÁö¸¸ ÀÏºÎ Å×½ºÅ©ÄÉÀÌ½º¿¡¼­ ½Ã°£ÃÊ°ú°¡ ³ª¿È
+    dfsë¥¼ í™œìš©í•´ ë¬¸ì œë¥¼ í•´ê²° í•˜ë ¤ í–ˆì§€ë§Œ ì¼ë¶€ í…ŒìŠ¤í¬ì¼€ì´ìŠ¤ì—ì„œ ì‹œê°„ì´ˆê³¼ê°€ ë‚˜ì˜´
     */
     //v = sizes;
     //dfs(0, 0, 0);
@@ -38,7 +38,7 @@ int solution(vector<vector<int>> sizes) {
 
 
     /*
-    ¸ðµç ¼ö¿¡ ´ëÇØ ÃÖ´ñ°ªÀ» Ã£À½.
+    ëª¨ë“  ìˆ˜ì— ëŒ€í•´ ìµœëŒ“ê°’ì„ ì°¾ìŒ.
     */
     int max_num1 = 0;
     FOR(y, 0, sizes.size()) {
@@ -47,8 +47,8 @@ int solution(vector<vector<int>> sizes) {
         }
     }
     /*
-    ÇÑ °³ÀÇ ½Ö¿¡¼­ ÀÛÀº ¼ö¸¦ ¼±ÅÃÇÏ°í
-    ¼±ÅÃÇÑ ¼öµé¿¡¼­ ÃÖ´ë°ªÀ» Ã£À½
+    í•œ ê°œì˜ ìŒì—ì„œ ìž‘ì€ ìˆ˜ë¥¼ ì„ íƒí•˜ê³ 
+    ì„ íƒí•œ ìˆ˜ë“¤ì—ì„œ ìµœëŒ€ê°’ì„ ì°¾ìŒ
     */
     int max_num2 = 0;
     FOR(i, 0, sizes.size()) {
