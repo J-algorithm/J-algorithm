@@ -12,21 +12,14 @@ public class PGS_등굣길_공진호 {
             dp[x][y] = -1;
         }
 
-        dp[1][1] = 1;
+        dp[1][0] = 1;
         for (int i = 1; i <= m; i++) {
             for (int j = 1; j <= n; j++) {
                 if (dp[i][j] == -1) {
+                    dp[i][j] = 0;
                     continue;
                 }
-                // 위쪽이 웅덩이가 아니라면
-                if(dp[i-1][j]!=-1){
-                    dp[i][j]+= dp[i-1][j];
-                }
-                // 왼쪽이 웅덩이가 아니라면
-                if(dp[i][j-1]!=-1){
-                    dp[i][j] += dp[i][j-1];
-                }
-                dp[i][j] %= MOD;
+                dp[i][j] += (dp[i - 1][j] + dp[i][j - 1]) % MOD;
             }
         }
         return dp[m][n];
