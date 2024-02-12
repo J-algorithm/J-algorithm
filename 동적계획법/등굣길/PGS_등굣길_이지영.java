@@ -36,10 +36,10 @@ public class PGS_등굣길_이지영 {
             dp[0][0] = 1;
 
             for (int i=1; i<n; i++) {
-                if(!isPaddle[i][0]) dp[i][0] = Math.max(0, dp[i-1][0]);
+                if(!isPaddle[i][0]) dp[i][0] = dp[i-1][0];
             }
             for (int j=1; j<m; j++) {
-                if(!isPaddle[0][j]) dp[0][j] = Math.max(0, dp[0][j-1]);
+                if(!isPaddle[0][j]) dp[0][j] = dp[0][j-1];
             }
 
         }
