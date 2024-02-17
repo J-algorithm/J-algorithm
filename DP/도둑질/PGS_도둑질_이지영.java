@@ -2,7 +2,6 @@ public class PGS_도둑질_이지영 {
 
     class Solution {
         public int solution(int[] money) {
-            int answer = 0;
             int N = money.length;
             int[][] dp = new int[N+1][2];
 
