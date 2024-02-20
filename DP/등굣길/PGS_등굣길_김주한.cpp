@@ -12,19 +12,19 @@ int dp[MAP_MAX][MAP_MAX];
 int solution(int m, int n, vector<vector<int>> puddles) {
     int answer = 0;
 
-    FOR(i, 0, puddles.size()) { // ¿ì¹° ÁöÁ¤
+    FOR(i, 0, puddles.size()) { // ìš°ë¬¼ ì§€ì •
         int y = puddles[i][0];
         int x = puddles[i][1];
 
         dp[y][x] = -1;
     }
 
-    dp[1][1] = 1; // ½ÃÀÛÀ§Ä¡ ¼¼ÆÃ
+    dp[1][1] = 1; // ì‹œìž‘ìœ„ì¹˜ ì„¸íŒ…
     FOR(y, 1, (m + 1)) {
         FOR(x, 1, (n + 1)) {
             int num1 = 0;
             int num2 = 0;
-            if (dp[y][x] == -1) continue;//¿õµ¢ÀÌ ¸¸³²
+            if (dp[y][x] == -1) continue;//ì›…ë©ì´ ë§Œë‚¨
             if (((y - 1) >= 1) && (dp[y - 1][x] != -1)) num1 = dp[y - 1][x];
             if (((x - 1) >= 1) && (dp[y][x - 1] != -1)) num2 = dp[y][x - 1];
 
