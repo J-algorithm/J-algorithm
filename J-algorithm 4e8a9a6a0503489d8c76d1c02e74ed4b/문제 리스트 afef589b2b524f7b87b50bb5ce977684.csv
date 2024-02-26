@@ -13,6 +13,12 @@
 4주차,피로도,"완전탐색",2024년 1월 30일 → 2024년 2월 5일,https://school.programmers.co.kr/learn/courses/30/lessons/87946,https://github.com/J-algorithm/J-algorithm/tree/main/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/%ED%94%BC%EB%A1%9C%EB%8F%84
 4주차,전력망을 둘로 나누기,"완전탐색",2024년 1월 30일 → 2024년 2월 5일,https://school.programmers.co.kr/learn/courses/30/lessons/86971,https://github.com/J-algorithm/J-algorithm/tree/main/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/%EC%A0%84%EB%A0%A5%EB%A7%9D%EC%9D%84%20%EB%91%98%EB%A1%9C%20%EB%82%98%EB%88%84%EA%B8%B0
 4주차,모음사전,"완전탐색",2024년 1월 30일 → 2024년 2월 5일,https://school.programmers.co.kr/learn/courses/30/lessons/84512,https://github.com/J-algorithm/J-algorithm/tree/main/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89/%EB%AA%A8%EC%9D%8C%EC%82%AC%EC%A0%84
-5주차,N으로 표현,"DP",2024년 2월 6일 → 2024년 2월 12일,
-5주차,정수삼각형,"DP",2024년 2월 6일 → 2024년 2월 12일,
-5주차,등굣길,"DP",2024년 2월 6일 → 2024년 2월 12일,
+5주차,N으로 표현,"DP",2024년 2월 6일 → 2024년 2월 12일,https://github.com/J-algorithm/J-algorithm/tree/main/DP/N%EC%9C%BC%EB%A1%9C%20%ED%91%9C%ED%98%84
+5주차,정수삼각형,"DP",2024년 2월 6일 → 2024년 2월 12일,https://github.com/J-algorithm/J-algorithm/tree/main/DP/%EC%A0%95%EC%88%98%20%EC%82%BC%EA%B0%81%ED%98%95
+5주차,등굣길,"DP",2024년 2월 6일 → 2024년 2월 12일,https://github.com/J-algorithm/J-algorithm/tree/main/DP/%EB%93%B1%EA%B5%A3%EA%B8%B8
+6주차,사칙연산,"DP",2024년 2월 13일 → 2024년 2월 19일,https://github.com/J-algorithm/J-algorithm/tree/main/DP/%EC%82%AC%EC%B9%99%EC%97%B0%EC%82%B0
+6주차,도둑질,"DP",2024년 2월 13일 → 2024년 2월 19일,https://github.com/J-algorithm/J-algorithm/tree/main/DP/%EB%8F%84%EB%91%91%EC%A7%88
+7주차,체육복,"그리디",2024년 2월 20일 → 2024년 2월 26일,
+7주차,조이스틱,"그리디",2024년 2월 20일 → 2024년 2월 26일,
+7주차,큰 수 만들기,"그리디",2024년 2월 20일 → 2024년 2월 26일,
+7주차,구명보트,"그리디",2024년 2월 20일 → 2024년 2월 26일,
