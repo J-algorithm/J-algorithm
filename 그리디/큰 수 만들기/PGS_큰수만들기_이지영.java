@@ -1,6 +1,6 @@
 import java.util.*;
 
-ublic class PGS_큰수만들기_이지영 {
+public class PGS_큰수만들기_이지영 {
 
     class Solution {
         Stack<Integer> stack;
