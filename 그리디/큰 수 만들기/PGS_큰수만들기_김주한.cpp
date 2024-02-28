@@ -19,7 +19,7 @@ string solution(string number, int k) {
       5. "775841"이 나온다.
     */
     FOR(i, k, number.size()) {
-        int tmp = -1;
+        int tmp = -1; // 최댓값이 0이면 갱신이 안됨
         int start = s.first + 1;
         FOR(j, start, (i + 1)) {
             if (tmp < int(number[j] - '0')) {
