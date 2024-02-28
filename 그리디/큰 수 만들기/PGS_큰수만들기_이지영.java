@@ -3,36 +3,30 @@ import java.util.*;
 public class PGS_큰수만들기_이지영 {
 
     class Solution {
-        Stack<Integer> stack;
+        Deque<Integer> deque;
         public String solution(String number, int k) {
-            stack = new Stack<>();
+            deque = new ArrayDeque<>();
 
             for (int i=0; i<number.length(); i++) {
                 int n = number.charAt(i) - '0';
-                if (stack.isEmpty()) {
-                    stack.push(n);
-                    continue;
-                }
-
-                while (!stack.isEmpty() && stack.peek()<n && k>0) {
-                    stack.pop();
+                while (!deque.isEmpty() && deque.peekLast()<n && k>0) {
+                    deque.pollLast();
                     k--;
                 }
-                stack.push(n);
+                deque.add(n);
             }
 
-            while (k>0) {
-                stack.pop();
+            while (k > 0) {
+                deque.pollLast();
                 k--;
             }
 
             StringBuilder sb = new StringBuilder();
-            while(!stack.isEmpty()) {
-                sb.append(stack.pop());
+            while(!deque.isEmpty()) {
+                sb.append(deque.pollFirst());
             }
-            return sb.reverse().toString();
+            return sb.toString();
         }
     }
-
 
 }
