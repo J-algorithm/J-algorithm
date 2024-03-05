@@ -25,12 +25,11 @@ int solution(vector<int> people, int limit) {
     int s_idx = 0; // start idx (정방향으로 이동하는 index)
     int e_idx = people.size() - 1; // end idx (역방향으로 이동하는 index)
     int cnt = 0;
-    while(1) {
+    while(s_idx <= e_idx) { // s_idx와 e_idx가 교차되면 전부 확인한셈.
         int weight = limit - people[s_idx]; // 더 태울수 있는 남은 무게
         if (weight >= people[e_idx]) --e_idx;  // 더 태울수 있다면 e_idx를 역방향으로 한칸 이동시켜 태움 처리
         ++s_idx; // 태울 수 있든 없든 1싸이클에 1명은 탐
         ++cnt;
-        if (s_idx > e_idx) break; // s_idx와 e_idx가 교차되면 전부 확인한셈.
     }
 
     answer = cnt;
