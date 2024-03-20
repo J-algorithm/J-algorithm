@@ -83,7 +83,7 @@ public class PGS_주사위고르기_공진호 {
         int lo = 0;
         int hi = arr.length - 1;
 
-        while(lo<=hi){
+        while(lo<hi){
             int m = (lo+hi)/2;
 
             if(arr[m]< target){
