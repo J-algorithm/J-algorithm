@@ -39,13 +39,11 @@ public class PGS_주사위고르기_이지영 {
                 return;
             }
 
-            if(now==N) return;
-
-            picked[now] = true;
-            pick(now+1, cnt+1, picked);
-
-            picked[now] = false;
-            pick(now+1, cnt, picked);
+            for (int i=now; i<N; i++) {
+                picked[i] = true;
+                pick(i+1, cnt+1, picked);
+                picked[i] = false;
+            }
         }
 
         void calculateAllCase(boolean[] picked) {
