@@ -17,10 +17,7 @@ public class PGS_튜플_이지영 {
                 for (String num : nums) {
                     int n = Integer.parseInt(num);
 
-                    if(!map.containsKey(n)) {
-                        map.put(n, 0);
-                    }
-                    map.put(n, map.get(n)+1);
+                    map.put(n, map.getOrDefault(n,0)+1);
                 }
             }
 
