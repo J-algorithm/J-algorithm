@@ -27,7 +27,7 @@ public class PGS_튜플_공진호 {
             }
             list.add(getSet(token));
         }
-        // 사이즈 순으로 내림차순 정렬
+        // 사이즈 순으로 오름차순 정렬
         Collections.sort(list,( o1, o2) -> o1.size() - o2.size());
 
         int idx = 0;
@@ -39,11 +39,11 @@ public class PGS_튜플_공진호 {
             hs.removeAll(cur);
             int remain = hs.iterator().next();
             result[idx++] = remain;
-
             cur.add(remain);
         }
         return result;
     }
+
 
     public int[] solution(String s) {
         // 가장 바깥의 괄호 제거
