@@ -13,11 +13,9 @@ public class PGS_요격시스템_이지영 {
 
         public int compareTo(Target o) {
             if (this.end == o.end) {
-                if (this.start < o.start) return -1;
-                else return 1;
+                return Integer.compare(this.start,o.start);
             }
-            if (this.end > o.end) return -1;
-            else return 1;
+            return Integer.compare(o.end,this.end);
         }
     }
 
