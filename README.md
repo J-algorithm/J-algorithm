@@ -12,7 +12,7 @@
 | 공진호 | wlsgh7608@naver.com   | https://github.com/wlsgh7608    |
 | 김주한 | hanykim1210@gmail.com | https://github.com/Hany-Kim     |
 | 송진주 | ddelsen3130@gmail.com | https://github.com/pearl313     |
-| 이지영 | jioung93@naver.com    | https://github.com/gorapaduckoo |
+| OOO | (블라인드)@naver.com  | https://github.com/gorapaduckoo |
 | 홍예진 | teepij@naver.com      | https://github.com/YeJinHong    |
 
 ## 스터디 진행
